@@ -1,26 +1,40 @@
 {
-  "name": "mundiware-assessment",
-  "version": "1.0.0",
-  "description": "Mundiware front-end assessment",
-  "main": "index.js",
-  "scripts": {
-    "test": "cypress"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Vinimart/mundiware-assessment.git"
-  },
-  "keywords": [
-    "front-end",
-    "assessment"
-  ],
-  "author": "Vinicius Martins",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Vinimart/mundiware-assessment/issues"
-  },
-  "homepage": "https://github.com/Vinimart/mundiware-assessment#readme",
-  "devDependencies": {
-    "gulp-cli": "^2.3.0"
-  }
+	"name": "mundiware-assessment",
+	"version": "1.0.0",
+	"description": "Mundiware front-end assessment",
+	"main": "index.js",
+	"scripts": {
+		"test": "cypress"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Vinimart/mundiware-assessment.git"
+	},
+	"keywords": [
+		"front-end",
+		"assessment"
+	],
+	"author": "Vinicius Martins",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Vinimart/mundiware-assessment/issues"
+	},
+	"homepage": "https://github.com/Vinimart/mundiware-assessment#readme",
+	"devDependencies": {
+		"gulp-cli": "^2.3.0",
+		"@babel/core": "^7.12.3",
+		"@babel/plugin-transform-runtime": "^7.12.1",
+		"@babel/preset-env": "^7.12.1",
+		"cypress": "^5.5.0",
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^7.0.1",
+		"gulp-babel": "^8.0.0",
+		"gulp-clean-css": "^4.3.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-imagemin": "^7.1.0",
+		"webpack-stream": "^6.1.0"
+	},
+	"dependencies": {
+		"@babel/runtime": "^7.12.1"
+	}
 }
