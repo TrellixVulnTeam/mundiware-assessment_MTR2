@@ -1,0 +1,26 @@
+{
+  "name": "mundiware-assessment",
+  "version": "1.0.0",
+  "description": "Mundiware front-end assessment",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vinimart/mundiware-assessment.git"
+  },
+  "keywords": [
+    "front-end",
+    "assessment"
+  ],
+  "author": "Vinicius Martins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vinimart/mundiware-assessment/issues"
+  },
+  "homepage": "https://github.com/Vinimart/mundiware-assessment#readme",
+  "devDependencies": {
+    "gulp-cli": "^2.3.0"
+  }
+}
