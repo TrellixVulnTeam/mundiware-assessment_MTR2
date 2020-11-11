@@ -3,6 +3,9 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     color: #303030;
+}
+
+main {
     max-width: 768px;
     margin: auto;
 }
@@ -48,7 +51,7 @@ a {
 /* Summary */
 .summary {
     position: relative;
-    bottom: 2.5em;
+    bottom: 2.3em;
     background-color: #ffffff;
     padding: 2em 2em;
     border-radius: 2.5em 2.5em 0 0;
@@ -236,8 +239,8 @@ a {
     width: 10em;
     height: 10em;
     margin-right: 1em;
-    background-color: #177ac5;
-    /* background-color: #065b9b; */
+    margin-bottom: 1em;
+    background-color: #3c89c4;
     border-radius: 3px;
     background-size: cover;
     background-position: center;
@@ -248,4 +251,44 @@ a {
     color: #ffffff;
     padding: 0.5em;
     font-size: 0.9em;
+}
+
+.related .related__profile {
+    margin-top: 4em;
+}
+
+.related .profile__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 1em;
+    margin-bottom: 1em;
+    white-space: nowrap;
+}
+
+.related .profile__image {
+    width: 5em;
+    height: 5em;
+    margin-bottom: 0.5em;
+    border-radius: 100%;
+}
+
+.related .profile__title {
+    margin: 0;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+.related .profile__caption {
+    margin: 0;
+    font-size: 0.6em;
+    color: #747474;
+}
+
+.footer {
+    padding: 0.5em;
+    font-size: 0.8em;
+    text-align: center;
+    color: #ffffff;
+    background-color: #065b9b;
 }
