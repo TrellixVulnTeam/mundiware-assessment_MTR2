@@ -1,4 +1,4 @@
-# MundiWare Front-end Assessment
+# Mundiware Front-end Assessment
 https://vinimart.github.io/mundiware-assessment/
 
 -------------------------------------------------
