@@ -220,3 +220,32 @@ a {
 }
 
 /* Related Section */
+.related {
+    position: relative;
+    bottom: 3.5em;
+    padding-left: 2em;
+}
+
+.related .news__title {
+    font-weight: 600;
+}
+
+.related .news__block {
+    display: flex;
+    align-items: flex-end;
+    width: 10em;
+    height: 10em;
+    margin-right: 1em;
+    background-color: #177ac5;
+    /* background-color: #065b9b; */
+    border-radius: 3px;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: soft-light;
+}
+
+.related .news__caption {
+    color: #ffffff;
+    padding: 0.5em;
+    font-size: 0.9em;
+}
