@@ -32,6 +32,8 @@
 		"gulp-cli": "^2.3.0",
 		"gulp-concat": "^2.6.1",
 		"gulp-imagemin": "^7.1.0",
+		"gulp-sass": "^4.1.0",
+		"node-sass": "^5.0.0",
 		"webpack-stream": "^6.1.0"
 	},
 	"dependencies": {
