@@ -24,7 +24,28 @@ a {
   color: #303030;
 }
 
-/* Header Section */
+.preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #212529;
+}
+
+.preloader .preloader__icon {
+  width: 8em;
+}
+
+.preloader.hidden {
+  animation: fadeOut 1s;
+  animation-fill-mode: forwards;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -52,7 +73,6 @@ a {
   width: 100%;
 }
 
-/* Profile Summary Section */
 .summary {
   position: relative;
   bottom: 2.5em;
@@ -122,7 +142,6 @@ a {
   width: 35%;
 }
 
-/* Profile Info Section */
 .info .info__block {
   display: flex;
   justify-content: space-around;
@@ -201,7 +220,11 @@ a {
   background-color: #024273;
 }
 
-.about .about__history:hover,
+.about .about__history:hover {
+  background-color: #177ac5;
+  transition: 0.5s;
+}
+
 .about .about__history:active {
   background-color: #177ac5;
   transition: 0.5s;
@@ -222,7 +245,11 @@ a {
   background-color: #065b9b;
 }
 
-.about .about__proposals:hover,
+.about .about__proposals:hover {
+  background-color: #177ac5;
+  transition: 0.5s;
+}
+
 .about .about__proposals:active {
   background-color: #177ac5;
   transition: 0.5s;
@@ -232,7 +259,6 @@ a {
   font-weight: 400;
 }
 
-/* Related News Section */
 .related {
   position: relative;
   bottom: 3.5em;
@@ -294,11 +320,22 @@ a {
   color: #747474;
 }
 
-/* Footer Section */
 .footer {
   padding: 0.5em;
   font-size: 0.8em;
   text-align: center;
   color: #ffffff;
   background-color: #065b9b;
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }

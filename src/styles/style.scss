@@ -2,14 +2,16 @@ $color_1: #303030;
 $color_2: #065b9b;
 $color_3: #747474;
 $color_4: #ffffff;
-$font_family_1: "Poppins", sans-serif;
-$background_color_1: #ffffff;
-$background_color_2: #065b9b;
-$background_color_3: #f2f2f2;
-$background_color_4: #00a297;
-$background_color_5: #024273;
-$background_color_6: #177ac5;
-$background_color_7: #3c89c4;
+$font_family_1: "Poppins",
+sans-serif;
+$background_color_1: #212529;
+$background_color_2: #ffffff;
+$background_color_3: #065b9b;
+$background_color_4: #f2f2f2;
+$background_color_5: #00a297;
+$background_color_6: #024273;
+$background_color_7: #177ac5;
+$background_color_8: #3c89c4;
 $border_color_1: #f2f2f2;
 
 body {
@@ -18,10 +20,12 @@ body {
     font-weight: 300;
     color: $color_1;
 }
+
 main {
     max-width: 768px;
     margin: auto;
 }
+
 hr {
     margin: 2em 0;
     border-top: 0.1em solid;
@@ -30,61 +34,90 @@ hr {
     border-left: 0;
     border-color: $border_color_1;
 }
+
 a {
     text-decoration: none;
     color: $color_1;
 }
 
-/* Header Section */
+.preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $background_color_1;
+
+    .preloader__icon {
+        width: 8em;
+    }
+}
+
+.preloader.hidden {
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1em 2em;
+
     .header__logo {
         width: 4em;
     }
+
     .header__menu {
         color: $color_2;
         cursor: pointer;
         font-size: 1.5em;
     }
+
     .header__search {
         color: $color_2;
         cursor: pointer;
         font-size: 1.5em;
     }
 }
+
 .profile {
     .profile__picture {
         width: 100%;
     }
 }
 
-/* Profile Summary Section */
 .summary {
     position: relative;
     bottom: 2.5em;
-    background-color: $background_color_1;
+    background-color: $background_color_2;
     padding: 2em 2em;
     border-radius: 2.5em 2.5em 0 0;
+
     .summary__presentation {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
+
     .summary__title-bold {
         font-weight: 600;
         line-height: 0em;
     }
+
     .summary__title-muted {
         font-weight: 300;
         font-size: 0.8em;
         color: $color_3;
     }
+
     .summary__affiliation {
         display: inline-block;
-        background-color: $background_color_2;
+        background-color: $background_color_3;
         color: $color_4;
         font-weight: 600;
         font-size: 1.3em;
@@ -92,15 +125,18 @@ a {
         border-radius: 100%;
         cursor: default;
     }
+
     .summary__desc {
         color: $color_3;
         line-height: 1.5em;
     }
+
     .info {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
     }
+
     .status {
         display: flex;
         align-items: center;
@@ -110,12 +146,15 @@ a {
         box-shadow: 0px 0px 0px 1px #f0f0f0;
         border-radius: 3px;
     }
+
     .about {
         display: flex;
+
         a {
             &:first-child {
                 width: 65%;
             }
+
             &:last-child {
                 width: 35%;
             }
@@ -123,7 +162,6 @@ a {
     }
 }
 
-/* Profile Info Section */
 .info {
     .info__block {
         display: flex;
@@ -135,12 +173,13 @@ a {
         padding: 0.8em;
         width: 3.6em;
         height: 3.6em;
-        background-color: $background_color_3;
+        background-color: $background_color_4;
         color: $color_3;
         border: 0.2em solid #ffffff;
         border-radius: 3px;
         box-shadow: 0px 0px 0px 1px #f0f0f0;
         margin-bottom: 0.5em;
+
         p {
             font-size: 0.7em;
             padding: 0;
@@ -149,19 +188,21 @@ a {
         }
     }
 }
+
 .status {
     .status__caption {
         display: flex;
         flex-direction: column;
         justify-content: center;
         width: 50%;
-        background-color: $background_color_3;
+        background-color: $background_color_4;
         color: $color_3;
         border-radius: 3px 0 0 3px;
         height: 3.5em;
         padding: 0;
         margin: 0;
         padding-left: 0.5em;
+
         h4 {
             font-size: 0.7em;
             font-weight: 500;
@@ -169,6 +210,7 @@ a {
             margin: 0;
             line-height: 130%;
         }
+
         p {
             font-size: 0.6em;
             font-weight: 300;
@@ -177,6 +219,7 @@ a {
             line-height: 130%;
         }
     }
+
     .status__view {
         display: flex;
         align-items: center;
@@ -184,11 +227,12 @@ a {
         width: 50%;
         height: 3.5em;
         font-weight: 500;
-        background-color: $background_color_4;
+        background-color: $background_color_5;
         color: $color_4;
         border-radius: 0 3px 3px 0;
     }
 }
+
 .about {
     .about__history {
         text-align: center;
@@ -198,16 +242,23 @@ a {
         border-radius: 3px 0 0 3px;
         box-shadow: 3px 3px 5px 1px #75a3c7;
         color: $color_4;
-        background-color: $background_color_5;
-        &:hover,
-        &:active {
-            background-color: $background_color_6;
+        background-color: $background_color_6;
+
+        &:hover {
+            background-color: $background_color_7;
             transition: 0.5s;
         }
+
+        &:active {
+            background-color: $background_color_7;
+            transition: 0.5s;
+        }
+
         h3 {
             font-weight: 400;
         }
     }
+
     .about__proposals {
         text-align: center;
         margin: 0;
@@ -216,46 +267,56 @@ a {
         border-radius: 0 3px 3px 0;
         box-shadow: 3px 3px 5px 1px #75a3c7;
         color: $color_4;
-        background-color: $background_color_2;
-        &:hover,
-        &:active {
-            background-color: $background_color_6;
+        background-color: $background_color_3;
+
+        &:hover {
+            background-color: $background_color_7;
             transition: 0.5s;
         }
+
+        &:active {
+            background-color: $background_color_7;
+            transition: 0.5s;
+        }
+
         h3 {
             font-weight: 400;
         }
     }
 }
 
-/* Related News Section */
 .related {
     position: relative;
     bottom: 3.5em;
     padding-left: 2em;
+
     .news__title {
         font-weight: 600;
     }
+
     .news__block {
         display: flex;
         align-items: flex-end;
         width: 10em;
         height: 10em;
         margin-right: 1em;
-        background-color: $background_color_7;
+        background-color: $background_color_8;
         border-radius: 3px;
         background-size: cover;
         background-position: center;
         background-blend-mode: soft-light;
     }
+
     .news__caption {
         color: $color_4;
         padding: 0.5em;
         font-size: 0.9em;
     }
+
     .related__profile {
         margin-top: 2.2em;
     }
+
     .profile__block {
         display: flex;
         flex-direction: column;
@@ -264,17 +325,20 @@ a {
         white-space: nowrap;
         cursor: pointer;
     }
+
     .profile__image {
         width: 5em;
         height: 5em;
         margin-bottom: 0.5em;
         border-radius: 100%;
     }
+
     .profile__title {
         margin: 0;
         font-size: 0.8em;
         font-weight: 500;
     }
+
     .profile__caption {
         margin: 0;
         font-size: 0.6em;
@@ -282,11 +346,22 @@ a {
     }
 }
 
-/* Footer Section */
 .footer {
     padding: 0.5em;
     font-size: 0.8em;
     text-align: center;
     color: $color_4;
-    background-color: $background_color_2;
+    background-color: $background_color_3;
+}
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
