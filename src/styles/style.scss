@@ -1,8 +1,7 @@
 $color_1: #303030;
-$color_2: inherit;
-$color_3: #065b9b;
-$color_4: #747474;
-$color_5: #ffffff;
+$color_2: #065b9b;
+$color_3: #747474;
+$color_4: #ffffff;
 $font_family_1: "Poppins", sans-serif;
 $background_color_1: #ffffff;
 $background_color_2: #065b9b;
@@ -33,8 +32,10 @@ hr {
 }
 a {
     text-decoration: none;
-    color: $color_2;
+    color: $color_1;
 }
+
+/* Header Section */
 .header {
     display: flex;
     justify-content: space-between;
@@ -44,12 +45,12 @@ a {
         width: 4em;
     }
     .header__menu {
-        color: $color_3;
+        color: $color_2;
         cursor: pointer;
         font-size: 1.5em;
     }
     .header__search {
-        color: $color_3;
+        color: $color_2;
         cursor: pointer;
         font-size: 1.5em;
     }
@@ -59,6 +60,8 @@ a {
         width: 100%;
     }
 }
+
+/* Profile Summary Section */
 .summary {
     position: relative;
     bottom: 2.3em;
@@ -77,12 +80,12 @@ a {
     .summary__title-muted {
         font-weight: 300;
         font-size: 0.8em;
-        color: $color_4;
+        color: $color_3;
     }
     .summary__affiliation {
         display: inline-block;
         background-color: $background_color_2;
-        color: $color_5;
+        color: $color_4;
         font-weight: 600;
         font-size: 1.3em;
         padding: 0.4em 0.45em;
@@ -90,7 +93,7 @@ a {
         cursor: default;
     }
     .summary__desc {
-        color: $color_4;
+        color: $color_3;
         line-height: 1.5em;
     }
     .info {
@@ -119,6 +122,8 @@ a {
         }
     }
 }
+
+/* Profile Info Section */
 .info {
     .info__block {
         display: flex;
@@ -131,7 +136,7 @@ a {
         width: 3.6em;
         height: 3.6em;
         background-color: $background_color_3;
-        color: $color_4;
+        color: $color_3;
         border: 0.2em solid #ffffff;
         border-radius: 3px;
         box-shadow: 0px 0px 0px 1px #f0f0f0;
@@ -151,7 +156,7 @@ a {
         justify-content: center;
         width: 50%;
         background-color: $background_color_3;
-        color: $color_4;
+        color: $color_3;
         border-radius: 3px 0 0 3px;
         height: 3.5em;
         padding: 0;
@@ -180,7 +185,7 @@ a {
         height: 3.5em;
         font-weight: 500;
         background-color: $background_color_4;
-        color: $color_5;
+        color: $color_4;
         border-radius: 0 3px 3px 0;
     }
 }
@@ -192,7 +197,7 @@ a {
         font-size: 0.6em;
         border-radius: 3px 0 0 3px;
         box-shadow: 3px 3px 5px 1px #75a3c7;
-        color: $color_5;
+        color: $color_4;
         background-color: $background_color_5;
         &:hover {
             background-color: $background_color_6;
@@ -209,7 +214,7 @@ a {
         font-size: 0.6em;
         border-radius: 0 3px 3px 0;
         box-shadow: 3px 3px 5px 1px #75a3c7;
-        color: $color_5;
+        color: $color_4;
         background-color: $background_color_2;
         &:hover {
             background-color: $background_color_6;
@@ -220,6 +225,8 @@ a {
         }
     }
 }
+
+/* Related News Section */
 .related {
     position: relative;
     bottom: 3.5em;
@@ -241,7 +248,7 @@ a {
         background-blend-mode: soft-light;
     }
     .news__caption {
-        color: $color_5;
+        color: $color_4;
         padding: 0.5em;
         font-size: 0.9em;
     }
@@ -270,13 +277,15 @@ a {
     .profile__caption {
         margin: 0;
         font-size: 0.6em;
-        color: $color_4;
+        color: $color_3;
     }
 }
+
+/* Footer Section */
 .footer {
     padding: 0.5em;
     font-size: 0.8em;
     text-align: center;
-    color: $color_5;
+    color: $color_4;
     background-color: $background_color_2;
 }
