@@ -207,12 +207,14 @@ a {
     background-color: #065b9b;
 }
 
-.about .about__history:hover {
+.about .about__history:hover,
+.about .about__history:active {
     background-color: #177ac5;
     transition: 0.5s;
 }
 
-.about .about__proposals:hover {
+.about .about__proposals:hover,
+.about .about__proposals:active {
     background-color: #177ac5;
     transition: 0.5s;
 }
