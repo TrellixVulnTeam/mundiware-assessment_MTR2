@@ -4,19 +4,22 @@ var gulp = require("gulp"),
 	babel = require("gulp-babel"),
 	webpack = require("webpack-stream"),
 	autoprefixer = require("gulp-autoprefixer"),
-	cleanCSS = require("gulp-clean-css");
+	cleanCSS = require("gulp-clean-css"),
+	sass =require("gulp-sass");
+
+	sass.compiler = require("node-sass");
 
 // Assets
 gulp.task("build-img", () => 
-	gulp.src("assets/img/**/*")
+	gulp.src("public/assets/**/*")
 		.pipe(imagemin())
-		.pipe(gulp.dest("dist/assets/img"))
+		.pipe(gulp.dest("dist/public/assets"))
 );
 
 // Javascript
 gulp.task("build-js", () =>
 	gulp
-		.src("js/*.js")
+		.src("src/scripts/*.js")
 		.pipe(
 			babel({
 				presets: ["@babel/preset-env"],
@@ -30,14 +33,14 @@ gulp.task("build-js", () =>
 				},
 			})
 		)
-		.pipe(concat("all.min.js"))
-		.pipe(gulp.dest("dist/scripts"))
+		.pipe(concat("scripts.min.js"))
+		.pipe(gulp.dest("dist/src/scripts"))
 );
 
 // CSS
 gulp.task("build-css", () =>
 	gulp
-		.src("css/*.css")
+		.src("src/styles/*.css")
 		.pipe(
 			autoprefixer({
 				cascade: false,
@@ -48,14 +51,14 @@ gulp.task("build-css", () =>
 				compatibility: "ie8",
 			})
 		)
-		.pipe(concat("all.min.css"))
-		.pipe(gulp.dest("dist/styles"))
+		.pipe(concat("styles.min.css"))
+		.pipe(gulp.dest("dist/src/styles"))
 );
 
 // Monitor
 function defaultTask(cb) {
-	gulp.watch("js/*.js", gulp.series("build-js"));
-	gulp.watch("css/*.css", gulp.series("build-css"));
+	gulp.watch("src/scripts/*.js", gulp.series("build-js"));
+	gulp.watch("src/styles/*.css", gulp.series("build-css"));
 	cb();
 }
 

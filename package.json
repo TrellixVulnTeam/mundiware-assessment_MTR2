@@ -4,7 +4,8 @@
 	"description": "Mundiware front-end assessment",
 	"main": "index.js",
 	"scripts": {
-		"test": "cypress"
+		"test": "cypress",
+		"gulp": "gulp"
 	},
 	"repository": {
 		"type": "git",
