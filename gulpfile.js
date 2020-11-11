@@ -1,3 +1,5 @@
+'use strict';
+
 var gulp = require("gulp"),
 	imagemin = require("gulp-imagemin"),
 	concat = require("gulp-concat"),
@@ -11,9 +13,9 @@ var gulp = require("gulp"),
 
 // Assets
 gulp.task("build-img", () => 
-	gulp.src("public/assets/**/*")
+	gulp.src("public/**/*.{png,jpg,jpeg}")
 		.pipe(imagemin())
-		.pipe(gulp.dest("dist/public/assets"))
+		.pipe(gulp.dest("dist/assets/img"))
 );
 
 // Javascript
@@ -37,10 +39,17 @@ gulp.task("build-js", () =>
 		.pipe(gulp.dest("dist/src/scripts"))
 );
 
+//SCSS
+gulp.task('build-sass', () =>
+	gulp.src('src/styles/*.scss')
+	  .pipe(sass().on('error', sass.logError))
+	  .pipe(gulp.dest('src/styles'))
+);
+
 // CSS
 gulp.task("build-css", () =>
 	gulp
-		.src("src/styles/*.css")
+		.src("src/styles/style.css")
 		.pipe(
 			autoprefixer({
 				overrideBrowserslist: ['last 99 versions'],
@@ -59,7 +68,7 @@ gulp.task("build-css", () =>
 // Monitor
 function defaultTask(cb) {
 	gulp.watch("src/scripts/*.js", gulp.series("build-js"));
-	gulp.watch("src/styles/*.css", gulp.series("build-css"));
+	gulp.watch("src/styles/*.scss", gulp.series("build-sass", "build-css"));
 	cb();
 }
 

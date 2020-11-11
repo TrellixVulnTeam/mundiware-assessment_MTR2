@@ -199,7 +199,8 @@ a {
         box-shadow: 3px 3px 5px 1px #75a3c7;
         color: $color_4;
         background-color: $background_color_5;
-        &:hover {
+        &:hover,
+        &:active {
             background-color: $background_color_6;
             transition: 0.5s;
         }
@@ -216,7 +217,8 @@ a {
         box-shadow: 3px 3px 5px 1px #75a3c7;
         color: $color_4;
         background-color: $background_color_2;
-        &:hover {
+        &:hover,
+        &:active {
             background-color: $background_color_6;
             transition: 0.5s;
         }
