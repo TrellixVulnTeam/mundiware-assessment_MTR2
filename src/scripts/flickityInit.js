@@ -2,14 +2,18 @@
 
 const newsCarousel = new Flickity(".news__carousel", {
 	// options
-	cellAlign: "left",
+	freeScroll: true,
 	contain: true,
+	// disable previous & next buttons and dots
 	prevNextButtons: false,
+	pageDots: false,
 });
 
 const profileCarousel = new Flickity(".profile__carousel", {
 	// options
-	cellAlign: "left",
+	freeScroll: true,
 	contain: true,
+	// disable previous & next buttons and dots
 	prevNextButtons: false,
+	pageDots: false,
 });

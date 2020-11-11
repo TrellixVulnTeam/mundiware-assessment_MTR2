@@ -242,7 +242,6 @@ a {
         width: 10em;
         height: 10em;
         margin-right: 1em;
-        margin-bottom: 1em;
         background-color: $background_color_7;
         border-radius: 3px;
         background-size: cover;
@@ -255,15 +254,15 @@ a {
         font-size: 0.9em;
     }
     .related__profile {
-        margin-top: 4em;
+        margin-top: 2.2em;
     }
     .profile__block {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding-right: 1em;
-        margin-bottom: 1em;
         white-space: nowrap;
+        cursor: pointer;
     }
     .profile__image {
         width: 5em;

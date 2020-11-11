@@ -191,7 +191,6 @@ a {
     width: 10em;
     height: 10em;
     margin-right: 1em;
-    margin-bottom: 1em;
     background-color: #3c89c4;
     border-radius: 3px;
     background-size: cover;
@@ -202,14 +201,14 @@ a {
     padding: 0.5em;
     font-size: 0.9em; }
   .related .related__profile {
-    margin-top: 4em; }
+    margin-top: 2.2em; }
   .related .profile__block {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-right: 1em;
-    margin-bottom: 1em;
-    white-space: nowrap; }
+    white-space: nowrap;
+    cursor: pointer; }
   .related .profile__image {
     width: 5em;
     height: 5em;
