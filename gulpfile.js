@@ -43,7 +43,8 @@ gulp.task("build-css", () =>
 		.src("src/styles/*.css")
 		.pipe(
 			autoprefixer({
-				cascade: false,
+				overrideBrowserslist: ['last 99 versions'],
+				cascade: false
 			})
 		)
 		.pipe(
