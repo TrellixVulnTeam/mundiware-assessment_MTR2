@@ -13,7 +13,12 @@ hr {
     border-right: 0;
     border-bottom: 0;
     border-left: 0;
-    border-color: #f1f1f1;
+    border-color: #f2f2f2;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Header */
@@ -98,7 +103,7 @@ hr {
     padding: 0.8em;
     width: 3.6em;
     height: 3.6em;
-    background-color: #f1f1f1;
+    background-color: #f2f2f2;
     color: #747474;
     border: 0.2em solid #ffffff;
     border-radius: 3px;
@@ -128,7 +133,7 @@ hr {
     flex-direction: column;
     justify-content: center;
     width: 50%;
-    background-color: #f1f1f1;
+    background-color: #f2f2f2;
     color: #747474;
     border-radius: 3px 0 0 3px;
     height: 3.5em;
@@ -160,7 +165,56 @@ hr {
     width: 50%;
     height: 3.5em;
     font-weight: 500;
-    background-color: #46a5a5;
+    background-color: #00a297;
     color: #ffffff;
     border-radius: 0 3px 3px 0;
+}
+
+.summary .about {
+    display: flex;
+}
+
+.summary .about a:first-child {
+    width: 65%;
+}
+
+.summary .about a:last-child {
+    width: 35%;
+}
+
+.about .about__history {
+    text-align: center;
+    margin: 0;
+    padding: 0.5em 0.3em;
+    font-size: 0.6em;
+    border-radius: 3px 0 0 3px;
+    box-shadow: 3px 3px 5px 1px #75a3c7;
+    color: #ffffff;
+    background-color: #024273;
+}
+
+.about .about__proposals {
+    text-align: center;
+    margin: 0;
+    padding: 0.5em 0.3em;
+    font-size: 0.6em;
+    border-radius: 0 3px 3px 0;
+    box-shadow: 3px 3px 5px 1px #75a3c7;
+    color: #ffffff;
+    background-color: #065b9b;
+}
+
+.about .about__history:hover {
+    background-color: #177ac5;
+    transition: 0.5s;
+}
+
+.about .about__proposals:hover {
+    background-color: #177ac5;
+    transition: 0.5s;
+}
+
+.about .about__proposals h3,
+.about .about__history h3 {
+    font-weight: 400;
 }
